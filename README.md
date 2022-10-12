@@ -37,8 +37,8 @@ Current support only udp flooding.
 
 ```
  - [x] udp flooding
- - [] tcp flooding
- - [] icmp flooding
+ - [ ] tcp flooding
+ - [ ] icmp flooding
 ```
 
 ## Contact Developer
