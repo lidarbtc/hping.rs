@@ -36,9 +36,9 @@ Current support only udp flooding.
 ## Plan
 
 ```
- [udp flooding]
- - [tcp flooding]
- - [icmp flooding]
+ - [x] udp flooding
+ - [] tcp flooding
+ - [] icmp flooding
 ```
 
 ## Contact Developer
