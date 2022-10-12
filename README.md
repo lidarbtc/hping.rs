@@ -33,7 +33,7 @@ Current support only udp flooding.
       └──────────> ./hping-rs 127.0.0.1:80
 ```
 
-## Plan
+## Develop plan
 
  - [x] udp flooding
  - [ ] tcp flooding
