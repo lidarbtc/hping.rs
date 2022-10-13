@@ -29,14 +29,15 @@ Current support only udp flooding.
 ## Usage
 
 ```sh
- Use command line : ./hping-rs <ip:port>
-      └──────────> ./hping-rs 127.0.0.1:80
+ Use command line : ./hping-rs udp <ip:port> or ./hping-rs tcp <ip>
+      └──────────> ./hping-rs udp 127.0.0.1:80
+      └──────────> ./hping-rs tcp 127.0.0.1
 ```
 
 ## Develop plan
 
  - [x] udp flooding
- - [ ] tcp flooding
+ - [x] tcp flooding
  - [ ] icmp flooding
 
 ## Contact Developer
