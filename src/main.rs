@@ -6,8 +6,6 @@ use std::io;
 use std::net::Ipv4Addr;
 use tokio::net::UdpSocket;
 
-//sudo ./target/release/hping-rs tcp 23.227.146.106
-
 #[tokio::main]
 async fn main() -> io::Result<()> {
     let args: Vec<_> = env::args().collect();
