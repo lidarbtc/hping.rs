@@ -6,8 +6,7 @@
  <img src="https://img.shields.io/github/forks/lidarbtc/hping.rs?color=%239999FF&style=for-the-badge"/> &nbsp;
  <img src="https://img.shields.io/github/license/lidarbtc/hping.rs?color=%23E8E8E8&style=for-the-badge"/> &nbsp;
 
-Under a developing!
-Current support only udp flooding.
+faster, safer and more powerful than c-base hping3
 
 ## Language</br>
 
@@ -32,17 +31,18 @@ Current support only udp flooding.
  Use command line : ./hping-rs udp <ip:port> or ./hping-rs tcp <ip>
       └──────────> ./hping-rs udp 127.0.0.1:80
       └──────────> ./hping-rs tcp 127.0.0.1
+      └──────────> ./hping-rs icmp 127.0.0.1
 ```
 
 ## Develop plan
 
  - [x] udp flooding
  - [x] tcp flooding
- - [ ] icmp flooding
+ - [x] icmp flooding
 
 ## Contact Developer
 
 ```
- session : 05c67e3461a3b17896f063535c2ade0b91639be688a6de6d5665258995f0fec660
+ session : @lidar
 ```
 

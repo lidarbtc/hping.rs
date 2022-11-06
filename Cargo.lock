@@ -24,6 +24,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
+name = "byteorder"
+version = "1.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
+
+[[package]]
 name = "bytes"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -65,6 +71,8 @@ dependencies = [
 name = "hping-rs"
 version = "0.1.0"
 dependencies = [
+ "icmp",
+ "icmp-socket",
  "pnet",
  "pnet_base",
  "pnet_datalink",
@@ -72,6 +80,25 @@ dependencies = [
  "pnet_transport",
  "rand",
  "tokio",
+]
+
+[[package]]
+name = "icmp"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ac73e9bd805ebd8bfd8bb46886a3126ebdb1f46b5e8f5c73170c968912bb2e16"
+dependencies = [
+ "libc",
+]
+
+[[package]]
+name = "icmp-socket"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "98bc3daf82cd6b2f02709427c17f75e1023471f59bc74726bbd27d8a907af605"
+dependencies = [
+ "byteorder",
+ "socket2",
 ]
 
 [[package]]

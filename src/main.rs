@@ -1,8 +1,10 @@
 pub mod route;
 
+use icmp;
 use route::tcp::packet::send_tcp_packets;
 use std::env;
 use std::io;
+use std::net::IpAddr;
 use std::net::Ipv4Addr;
 use tokio::net::UdpSocket;
 
@@ -14,7 +16,8 @@ async fn main() -> io::Result<()> {
         println!(
             "usage: \n
             UDP : ./hping-rs udp ip:port \n
-            TCP : ./hping-rs tcp ip
+            TCP : ./hping-rs tcp ip \n
+            ICMP : ./hping-rs icmp ip
             "
         );
         panic!();
@@ -46,6 +49,26 @@ async fn main() -> io::Result<()> {
                         }
                     }
                 }
+            }
+        }
+        "icmp" => {
+            let split: Vec<&str> = host.split(".").collect();
+            println!("start ICMP flooding!");
+
+            let localhost_v4 = IpAddr::V4(Ipv4Addr::new(
+                split[0].parse().unwrap(),
+                split[1].parse().unwrap(),
+                split[2].parse().unwrap(),
+                split[3].parse().unwrap(),
+            ));
+
+            let ping = icmp::IcmpSocket::connect(localhost_v4);
+            let mut ping = ping.unwrap();
+
+            let payload: &[u8] = &[1, 2];
+
+            loop {
+                let _ = ping.send(payload);
             }
         }
         _ => println!("invaild method!"),
