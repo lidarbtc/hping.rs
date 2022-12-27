@@ -32,7 +32,7 @@ pub mod packet {
             let mut eth_header =
                 MutableEthernetPacket::new(&mut tmp_packet[..ETHERNET_HEADER_LEN]).unwrap();
 
-            eth_header.set_destination(MacAddr::broadcast());
+            eth_header.set_destination(MacAddr::new(0, 0, 0, 0, 0, 0));
             eth_header.set_source(*partial_packet.iface_src_mac);
             eth_header.set_ethertype(EtherTypes::Ipv4);
         }

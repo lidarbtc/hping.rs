@@ -30,7 +30,7 @@ async fn main() -> io::Result<()> {
 
     match method.as_str() {
         "tcp" => {
-            let interface = String::from("enp2s0");
+            let interface = String::from("your interface name!");
 
             println!("start TCP SYN flooding!");
 
