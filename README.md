@@ -43,6 +43,6 @@ faster, safer and more powerful than c-base hping3
 ## Contact Developer
 
 ```
- session : @lidar
+ session : lidar
 ```
 
