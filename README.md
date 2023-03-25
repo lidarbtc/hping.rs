@@ -1,6 +1,6 @@
 <div align=center>
  
-# Hping.rs - Powerful ddos tool, hping3 in rust 🦀
+# Hping.rs - Powerful overload test tool, hping3 in rust 🦀
  <p>
  <img src="https://img.shields.io/github/stars/lidarbtc/hping.rs?color=%23DF0067&style=for-the-badge"/> &nbsp;
  <img src="https://img.shields.io/github/forks/lidarbtc/hping.rs?color=%239999FF&style=for-the-badge"/> &nbsp;
@@ -36,13 +36,12 @@ faster, safer and more powerful than c-base hping3
 
 ## Develop plan
 
- - [x] udp flooding
- - [x] tcp flooding
- - [x] icmp flooding
+- [x] udp flooding
+- [x] tcp flooding
+- [x] icmp flooding
 
 ## Contact Developer
 
 ```
  session : lidar
 ```
-
