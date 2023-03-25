@@ -13,7 +13,8 @@ jobs:
       matrix:
         target:
           - x86_64-unknown-linux-gnu
-          - x86_64-pc-windows-gnu
+          #- x86_64-pc-windows-gnu
+          - aarch64-unknown-linux-gnu
           #- x86_64-apple-darwin
     steps:
       - name: Checkout repository
@@ -36,13 +37,13 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: hping-rs-${{ matrix.target }}
-          path: target/${{ matrix.target }}/release/hping-rs*
+          path: target/${{ matrix.target }}/release/hping-rs
 
       - name: Publish release
         if: matrix.target == 'x86_64-unknown-linux-gnu'
         uses: softprops/action-gh-release@v1
         with:
           files: >
-            target/${{ matrix.target }}/release/hping-rs*
+            target/${{ matrix.target }}/release/hping-rs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
