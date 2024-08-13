@@ -39,9 +39,3 @@ faster, safer and more powerful than c-base hping3
 - [x] udp flooding
 - [x] tcp flooding
 - [x] icmp flooding
-
-## Contact Developer
-
-```
- session : lidar
-```
